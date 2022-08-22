@@ -16,7 +16,6 @@ namespace HashTable
             this.NodeData = nodeData;
             this.rightTree = null;
             this.leftTree = null;
-
         }
         int leftCount = 0, rightCount = 0;
         bool result = false;
