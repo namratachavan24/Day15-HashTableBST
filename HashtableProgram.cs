@@ -66,6 +66,7 @@ namespace HashTable
             {
                 linkedList = new LinkedList<KeyValue<K, V>>();
                 items[position] = linkedList;
+                
             }
             return linkedList;
         }
