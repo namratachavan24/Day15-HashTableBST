@@ -40,8 +40,6 @@ namespace HashTable
             {
                 linkedList.Remove(foundItem);
             }
-
-
         }
         public V Get(K key)
         {
@@ -63,7 +61,7 @@ namespace HashTable
             return Math.Abs(position);
         }
 
-        protected LinkedList<KeyValue<K, V>> GetLinkedList(int position)
+       protected LinkedList<KeyValue<K, V>> GetLinkedList(int position)
         {
             LinkedList<KeyValue<K, V>> linkedList = items[position];
             if (linkedList == null)
@@ -73,14 +71,11 @@ namespace HashTable
             }
             return linkedList;
         }
-
         public struct KeyValue<k, v>
         {
             public k Key { get; set; }
             public v Value { get; set; }
         }
-
-
         public int CheckHash(K key)
         {
             int position = GetArrayPosition(key);
@@ -88,7 +83,6 @@ namespace HashTable
             int count = 1;
             bool found = false;
             KeyValue<K, V> founditem = default(KeyValue<K, V>);
-
             foreach (KeyValue<K, V> keyValue in LinkedListofPosition)
             {
                 if (keyValue.Key.Equals(key))
@@ -107,7 +101,6 @@ namespace HashTable
             {
                 return 1;
             }
-
         }
 
         public void GetFreq()
@@ -127,15 +120,12 @@ namespace HashTable
                     FrequencyOfWords.Add(i, 1);
                 }
             }
-
             IEnumerable<string> uniqueItems = words.Distinct<string>();
             foreach (var i in uniqueItems)
             {
                 FrequencyOfWords.Display(i);
             }
         }
-
-
         public void Display(K key)
         {
             int position = GetArrayPosition(key);
@@ -146,10 +136,8 @@ namespace HashTable
                 {
                     Console.WriteLine("{ KeyValue : " + keyValue.Key + " , Freq of Occurance : " + keyValue.Value + " }");
                 }
-
             }
         }
-
     }
 }
 
