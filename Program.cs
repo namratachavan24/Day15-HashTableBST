@@ -11,9 +11,6 @@
             binarySearch.Insert(70);
 
             binarySearch.Display();
-
-
-
         }
     }
 }
